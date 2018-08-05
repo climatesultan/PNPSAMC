@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "279817255479",
+    "firebase_url": "https://pnpsamc-main.firebaseio.com",
+    "project_id": "pnpsamc-main",
+    "storage_bucket": "pnpsamc-main.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:279817255479:android:bbc46130a9e0b89f",
+        "android_client_info": {
+          "package_name": "com.gokulrajendran.android.pnpsamc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "279817255479-70ri4brnseduo1715u4da7lksahfupdf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gokulrajendran.android.pnpsamc",
+            "certificate_hash": "b5834ceeea7dd119e7571bdf2eab7bc9b440b7da"
+          }
+        },
+        {
+          "client_id": "279817255479-vcdnhnvpb2ve1i96ecf403uq4p53ejq2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaZQF3OA3a3tv_5MHf-HT6Wlrgls1w1X8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "279817255479-vcdnhnvpb2ve1i96ecf403uq4p53ejq2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
