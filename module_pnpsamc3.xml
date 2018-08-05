@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_pnpsamc3" default="compile.module.pnpsamc3">
+  <dirname property="module.pnpsamc3.basedir" file="${ant.file.module_pnpsamc3}"/>
+  
+  <property name="module.jdk.home.pnpsamc3" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.pnpsamc3" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.pnpsamc3" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.pnpsamc3" value="-encoding UTF-8 -source 1.7 -target 1.7 ${compiler.args}"/>
+  
+  <property name="pnpsamc3.output.dir" value="${module.pnpsamc3.basedir}/build/classes/production/PNPSAMC3"/>
+  <property name="pnpsamc3.testoutput.dir" value="${module.pnpsamc3.basedir}/build/classes/test/PNPSAMC3"/>
+  
+  <path id="pnpsamc3.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="pnpsamc3.module.production.classpath">
+    <path refid="${module.jdk.classpath.pnpsamc3}"/>
+  </path>
+  
+  <path id="pnpsamc3.runtime.production.module.classpath">
+    <pathelement location="${pnpsamc3.output.dir}"/>
+  </path>
+  
+  <path id="pnpsamc3.module.classpath">
+    <path refid="${module.jdk.classpath.pnpsamc3}"/>
+    <pathelement location="${pnpsamc3.output.dir}"/>
+  </path>
+  
+  <path id="pnpsamc3.runtime.module.classpath">
+    <pathelement location="${pnpsamc3.testoutput.dir}"/>
+    <pathelement location="${pnpsamc3.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.pnpsamc3">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.pnpsamc3">
+    <patternset refid="excluded.from.module.pnpsamc3"/>
+  </patternset>
+  
+  
+  <target name="compile.module.pnpsamc3" depends="compile.module.pnpsamc3.production,compile.module.pnpsamc3.tests" description="Compile module PNPSAMC3"/>
+  
+  <target name="compile.module.pnpsamc3.production" depends="register.custom.compilers" description="Compile module PNPSAMC3; production classes"/>
+  
+  <target name="compile.module.pnpsamc3.tests" depends="register.custom.compilers,compile.module.pnpsamc3.production" description="compile module PNPSAMC3; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.pnpsamc3" description="cleanup module">
+    <delete dir="${pnpsamc3.output.dir}"/>
+    <delete dir="${pnpsamc3.testoutput.dir}"/>
+  </target>
+</project>
